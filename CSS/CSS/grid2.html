@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 2</title>
+    <!-- CSS Grid -->
+      <style>
+        .grid{
+            border: 2px solid gray;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                                 "str str str"
+                                 "foot foot foot";
+        }
+
+        .grid1{
+            border: 2px solid black;
+            width: 55px;
+            height : 55px;
+        }
+
+        :root{
+            --1color:red;
+            --2color:blue;
+            --3color:rgb(255, 81, 0);
+            --4color:rgb(43, 255, 0);
+            --5color:rgb(0, 255, 204);
+        }
+        
+        .grid-1{
+            grid-area: nav;
+            background-color: var(--1color);
+        }
+
+        .grid-2{
+            grid-area: str;
+            grid-column: 1;
+            background-color: var(--2color);
+        }
+        
+        .grid-3{
+            grid-area: str;
+            grid-column: 2;
+            background-color: var(--3color);
+        }
+        
+        .grid-4{
+           grid-area: str;
+           grid-column: 3;
+           background-color: var(--4color);
+        }
+
+        .grid-5{
+            grid-area: foot;
+            background-color: var(--5color);
+        }
+
+
+      </style>
+</head>
+<body>
+    <!-- CSS Grid -->
+             <h1>
+                <li>
+                    <b>
+                        CSS Grid
+                    </b>
+                </li>    
+             </h1>
+             <div class="grid">
+                <div class="grid1 grid-1">1</div>
+                <div class="grid1 grid-2">2</div>
+                <div class="grid1 grid-3">3</div>
+                <div class="grid1 grid-4">4</div>
+                <div class="grid1 grid-5">5</div>
+             </div>
+</body>
+</html>

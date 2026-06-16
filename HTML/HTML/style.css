@@ -1,0 +1,21 @@
+body{
+    background-color: lightgrey;
+}
+th{
+    border: 2px solid black;
+}
+ td{
+    border: 2px solid black;
+ }
+caption{
+    text-align: center;
+    font-size: larger;
+    font-style: italic;
+    border: 2px solid grey;
+}
+h2{
+    span{
+        background-color: blue;
+        color: black;
+    }
+}

@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <style>
+        .green {
+            color: green;
+        }
+    </style>
+    <!-- Element Selector -->
+    <style>
+        h3 {
+            background-color: blue;
+        }
+    </style>
+    <!-- Class Selector -->
+    <style>
+        .div {
+            background-color: blueviolet;
+        }
+    </style>
+    <!-- ID Selector -->
+    <style>
+        #green {
+            background-color: greenyellow;
+        }
+    </style>
+    <!-- Child Selector -->
+    <style>
+        div>p {
+            background-color: aqua;
+        }
+    </style>
+    <!-- Descendant Selector -->
+    <style>
+        span p {
+            background-color: darkolivegreen;
+        }
+    </style>
+    <!-- Universal Selector -->
+    <style>
+        * {
+            background-color: lightgrey;
+        }
+    </style>
+    <!-- Pseudo Selector -->
+    <style>
+        a:visited {
+            color: red;
+        }
+
+        a:link {
+            color: green;
+        }
+
+        a:active {
+            background-color: yellow;
+        }
+
+        a:hover {
+            background-color: aqua;
+        }
+
+        .one {
+            p:first-child {
+                background-color: violet;
+            }
+        }
+
+        #content {
+            color: darkblue;
+        }
+    </style>
+    <!-- Grouping Selector -->
+    <style>
+        .group {
+
+            h1,
+            h2,
+            p {
+                background-color: palevioletred;
+                color: blanchedalmond;
+            }
+        }
+    </style>
+    <!-- Box Model -->
+    <style>
+        .box {
+            background-color: grey;
+        }
+
+        .box1 {
+            color: red;
+            padding: 10px;
+            margin: 12px;
+            border: 2px;
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            color: blue;
+            padding: 10px;
+            margin: 12px;
+            border: 2px;
+            height: 200px;
+            box-sizing: border-box;
+        }
+    </style>
+    <!-- Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+        #Font {
+            font-family: "Baloo Bhai 2", sans-serif;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 20px;
+            line-height: 50px;
+            letter-spacing: 3px;
+            text-decoration: underline;
+        }
+
+        .text {
+            text-transform: capitalize;
+            text-decoration: underline;
+            text-decoration-color: darkblue;
+            /* text-decoration-style: dotted; */
+            text-decoration-thickness: 7px;
+            text-indent: 30px;
+        }
+
+        .Lorem {
+            border: 2px solid red;
+            width: 50px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .Lorem2 {
+            border: 2px solid red;
+            width: 50px;
+            text-overflow: clip;
+            overflow: hidden;
+        }
+
+        .Lorem3 {
+            border: 2px solid red;
+            width: 50px;
+            word-break: break-all;
+        }
+    </style>
+    <!-- CSS COLORS -->
+    <style>
+        /* Color Keywords */
+        .keyword {
+            color: darkred;
+        }
+
+        /* HEX Color Code */
+        .hex {
+            color: #E813C6;
+        }
+
+        /* RGB */
+        .rgb {
+            color: rgb(11, 233, 214);
+        }
+
+        /* RGBA */
+        .rgba {
+            color: rgba(11, 166, 32, 0.745);
+        }
+
+        /* HSL */
+        .hsl {
+            color: hsl(286, 87%, 30%);
+        }
+
+        /* HSLA */
+        .hsla {
+            color: hsla(27, 82%, 33%, 0.822);
+        }
+    </style>
+    <style>
+        /* universal selector */
+        /* * {
+            padding: 0;
+            margin: 0;
+        } */
+
+        /* html for rem */
+        /* html {
+            font-size: 12px;
+        } */
+
+        /* <!-- px(pixel) --> */
+
+        .px {
+            box-sizing: border-box;
+            border: 2px solid blue;
+            /* (this is my laptop screen resolution) */
+            width: 1303px;
+            background-color: turquoise;
+        }
+
+        /* vw(Viewport Width) */
+        /* & */
+        /* vh(Viewport Hieght) */
+        .vw {
+            box-sizing: border-box;
+            border: 2px solid blue;
+            /* (this is my viewport width screen resolution) */
+            width: 50vw;
+            height: 10vh;
+            margin: auto;
+            background-color: turquoise;
+        }
+
+        .vh {
+            margin: 26px auto;
+            border: 2px solid blue;
+            width: 50vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            background-color: turquoise;
+            font-size: 22px;
+        }
+
+        /* em */
+        /* & */
+        /* rem */
+        .em {
+            border: 2px solid blue;
+            margin: auto;
+            font-size: 18px;
+            /* this width is called a parent width */
+            width: 90vw;
+            background-color: turquoise;
+        }
+
+        .em>div {
+            font-size: 2em;
+            font-size: 2rem;
+            /* this width is a 50% of his parent width (chlid 1) */
+            width: 50%;
+            border: 1px solid red;
+        }
+
+        .em>div>div {
+            border: 1px solid green;
+            /* this is also a 50% of parent(child1) width (child2) */
+            width: 50%;
+        }
+
+        /* Vmin
+        &
+        Vmax */
+        .vmin {
+            background-color: pink;
+            color: black;
+            font-size: 22px;
+            /* On laptop and PC Vmin or Vh both of are same. */
+            width: 50vmin;
+            /* height: 100vmin; */
+            /* width: 80vw; */
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 26px auto;
+        }
+    </style>
+
+    <!-- CSS Display Property -->
+    <style>
+        .display {
+            border: 2px solid blue;
+            display: inline-block;
+            padding: 45px;
+            margin: 30px;
+            /* display: none; */
+        }
+
+        .display1 {
+            /* display: none; */
+            /* visibility: hidden; */
+            /* display: inline-flex; */
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <!-- Box Shadow's -->
+    <style>
+        .shadow {
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 12px 7px 7px red;
+        }
+    </style>
+
+    <!-- Text Shadow -->
+    <style>
+        .text1 {
+            text-shadow: 4px 2px 0px blue;
+        }
+    </style>
+
+    <!-- Outlines -->
+    <style>
+        .outline {
+            border: 2px solid black;
+            padding: 34px;
+            margin: 22px;
+            outline: 2px solid blue;
+            outline-offset: 6px;
+            border-radius: 4px;
+        }
+    </style>
+
+    <!-- Css Styling Lists -->
+    <style>
+        nav ul li {
+            /* list-style: none; */
+            list-style: devanagari;
+            list-style-type: "💦";
+            list-style-position: inside;
+            /* list-style-image: url(download.png); */
+            /* display: flex; */
+            /* background-color: orangered; */
+            /* border: 2px solid black;  */
+            /* margin: 2px; */
+        }
+    </style>
+
+    <!-- Overflow Property -->
+    <style>
+        .over {
+            border: 2px solid black;
+            width: 30vw;
+            height: 10vh;
+            overflow: scroll;
+            /* overflow: hidden; */
+            overflow: auto;
+            /* with (overflow: auto;) enable. */
+            white-space: nowrap;
+            /* making dots */
+            text-overflow: ellipsis;
+            /* cut the words */
+            text-overflow: clip;
+
+        }
+    </style>
+
+    <!-- Postion Property -->
+    <style>
+        /* *{
+            margin: 0%;
+            padding: 0%;
+        } */
+
+        .parent {
+            border: 3px solid blue;
+            height: 200vh;
+            width: 87vw;
+            padding: 34px;
+            margin: 22px;
+            /* transform, filter, or Persspective properties can also make an element appear
+            as postioned */
+            position: relative;
+            transform: translate(0);
+            filter: invert();
+            /* but, then u write 0 all colo are same as before */
+            perspective: 0em;
+        }
+
+        .postion {
+            border: 2px solid black;
+            height: 200px;
+            width: 80vw;
+            padding: 34px;
+            margin: 22px;
+        }
+
+        .postion1 {
+            position: sticky;
+            top: 0px;
+            height: 111px;
+            width: 100%;
+            margin: 0%;
+            padding: 0%;
+            background-color: aqua;
+            /* position: absolute;
+            top: 0px;
+            left: 56px; */
+        }
+
+        .postion2 {
+            background-color: orange;
+            /* position: relative;
+            top: 77px;
+            left: 66px; */
+        }
+
+        .postion3 {
+            /* position: relative; */
+            background-color: darkolivegreen;
+            /* position: fixed;
+            bottom: 0px;
+            left: 25vw; */
+
+        }
+
+        .postion4 {
+            background-color: blue;
+        }
+    </style>
+
+    <!-- Css Variable -->
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+
+        /* this is a Global Variable */
+        :root {
+            --color: hotpink;
+            --seccolor: rgb(250, 117, 0);
+            --defpad: 34px;
+            --defop: 0.3;
+        }
+
+        .var {
+            background-color: var(--color, blue);
+            color: black;
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        .ul {
+            display: flex;
+        }
+
+        .li {
+            /* opacity: var(--defop); */
+            list-style: none;
+            padding: var(--defpad);
+            background-color: var(--color, blue);
+        }
+
+        .li:first-child {
+            --color: lightpink;
+            background-color: var(--color);
+        }
+
+        .var1 {
+            /* background-color: rgb(97, 191, 97); */
+            background-color: var(--seccolor, blue);
+        }
+    </style>
+
+    <!-- Css Float & Clear -->
+    <style>
+        div >img {
+            width: 240px;
+            float: left;
+            /* float: right; */
+
+        }
+
+        .cards {
+            border: 2px solid black;
+            display: flow-root;
+        }
+
+        .card {
+            border: 2px solid red;
+        }
+
+        .card:nth-child(2) {
+            padding: 22px;
+        }
+
+        .card:nth-child(3) {
+            background-color: aquamarine;
+            clear: both;
+        }
+    </style>
+
+    <!-- More in Css Selectors -->
+    <style>
+        /* .select:first-child{
+            background-color: red;
+        } */
+
+        .select::first-letter {
+            color: white;
+            font-size: 18px
+        }
+
+        /* .select:first-line{
+            color: yellow;
+        } */
+
+        /* Unviersal Selector */
+        /* .selector *{
+            color: blue;                
+            border: 2px solid black;
+        } */
+
+        /* Atribute Selector */
+        /* [data-color="Primary"]{
+            margin-top: 33px;             
+            padding: 22px;
+        } */
+
+        /* Atribute Selector with Grouning Selector */
+        /* p, a, .selector [data-color="Primary"]{
+            margin-top: 33px;             
+            padding: 22px;
+        }*/
+
+        /* nth child selector */
+        .select:nth-child(even) {
+            background-color: red;
+        }
+
+        .select:nth-child(odd) {
+            background-color: blue;
+        }
+
+        .select:nth-last-child(2) {
+            background-color: brown;
+        }
+
+        /* Before & After Pseudo Elements */
+        .selector::before {
+            content: "Good Morning";
+            background-color: #E813C6;
+            color: antiquewhite;
+            border: 1px solid black;
+        }
+
+        .selector::after {
+            content: "Good Night";
+            background-color: #E813C6;
+            color: antiquewhite;
+            border: 1px solid black;
+        }
+
+        /* Selection selector */
+
+        /*Apply in whole CSS Web Page*/
+        ::selection {
+            color: aqua;
+            background-color: black;
+        }
+
+        /*Apply in only More CSS Selector Topic*/
+        /* .selector::selection{
+            color:red;          
+            background-color: aqua;
+        } */
+    </style>
+
+    <!-- Flex Box -->
+    <style>
+        .flex {
+            border: 2px solid red;
+            height: 80vh;
+            display: flex;
+
+            /*~~~~~~~~~~~~~ justify content property ~~~~~~~~~~~~*/
+            justify-content: center;
+            /* justify-content: flex-end; */
+            /* justify-content: flex-start; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /*~~~~~~~~~~~~~ there is no justify items ~~~~~~~~~~~~~*/
+
+
+            /*Align items & Contents property */
+
+            /* align items ko sirf ek line k liye use krte h */
+            align-items: center;
+            /* align content ko multiple lines k liye use krte h */
+            /* align-content: center; */
+
+
+            /* flex direction property*/
+            flex-direction: column;
+            /* flex-direction: column-reverse; */
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+
+            /* flex wrap property*/
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            flex-basis: row wrap;
+
+            /* gaps propety */
+            gap: 40px;
+            column-gap: 30px;
+            row-gap: 10px;
+        }
+
+        .items {
+            border: 2px solid black;
+            background-color: blue;
+            width: 80px;
+            height: 80px;
+            /* margin: 10px; */
+
+            /* flex-grow: 1; */
+
+        }
+
+        .items1 {
+            /* flex-grow: 3; */
+            flex-shrink: 2;
+            align-self: flex-end;
+        }
+
+        .items2 {
+            align-self: flex-start;
+        }
+
+        /* Oreder property */
+
+        /* Default order is always 0 */
+        .order1 {
+            order: 1;
+        }
+
+        .order2 {
+            order: 2;
+        }
+
+        .order3 {
+            order: 3;
+        }
+    </style>
+
+    <!-- CSS Transform -->
+    <style>
+        .transform {
+            border: 2px solid purple;
+            width: 80vw;
+            height: 80vh;
+        }
+
+        .trans {
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Rotate Properties */
+            /* transform: rotate(45deg); */
+            transform-origin: 0% 0%;
+            /* transform: rotateX(90deg); */
+            /* transform: rotateY(45deg); */
+            /* transform: rotateZ(45deg); */
+
+            /* Scale properties */
+            /* transform: scale(1.5); */
+            /* transform: scaleX(1.5); */
+            /* transform: scaleY(1.5); */
+            /* transform: scaleZ(1.5); */
+
+            /* Skew properties */
+            /* transform: skew(10deg); */
+            /* transform: skewX(5deg); */
+            /* transform: skewY(10deg); */
+
+            /* Translate properties */
+            /* transform: translate(34px); */
+            /* transform: translate(34%); */
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+            /* transform: translateZ(70px); */
+            /* transform: translate3d(45px); */
+
+            /* Shorthand Properties of Transform */
+            transform: translateY(100%) skewX(45deg) translateX(45%);
+        }
+    </style>
+
+    <!-- Transition Property -->
+    <style>
+        .transition {
+            background-color: red;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .hole {
+            background-color: aqua;
+            width: 5vw;
+            height: 4vh;
+
+            /*~~~~~~ Transition Property ~~~~~~ */
+            /* transition-property: all;
+            transition-property: background-color, transform;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s; */
+
+            /* Shorthand Property of Transition */
+            transition: all 3s cubic-bezier(0, 0.66, 0.39, 0.99) 1s;
+        }
+
+        .translate {
+            transform: translateX(10vw) translateY(10vh) scale(4);
+            background-color: blue;
+        }
+    </style>
+
+    <!-- Animation Property -->
+    <style>
+        .animation {
+            background-color: rgb(1, 82, 82);
+            width: 30vw;
+            height: 80vh;
+        }
+
+        .anime {
+            height: 45px;
+            width: 34px;
+            /* animation: Ayushman;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-direction: alternate-reverse;
+            animation-play-state: paused;
+            animation-play-state: running; */
+            animation-fill-mode: backwards;
+
+
+            /* Shorthand Property */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: Ayushman 1s cubic-bezier(0.165, 0.84, 0.44, 1) 3s 1;
+        }
+
+        @keyframes Ayushman {
+            form {
+                background-color: red;
+            }
+
+            to {
+                background-color: #E813C6;
+                transform: translateX(1000px);
+                transition-timing-function: cubic-bezier(0.65, -0.01, 0, 0.27);
+            }
+        }
+    </style>
+
+    <!-- Filters Properties -->
+     <style>
+        .filter img{
+            /* filter: blur(10px); */
+            /* filter: brightness(200%); */
+            /* filter: contrast(1000%); */
+            filter: grayscale(200%);
+
+            /* make picture old type */
+            filter: sepia(100%);
+            
+            /* filter: invert(); */
+            /* filter: opacity(0.2); */
+
+            /* Shorthand Property */
+            /* filter: blur (23px) brightness(122%) contrast(122%); */
+        }
+     </style>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1>
+            <b><u>CSS START</u></b>
+        </h1>
+    </div>
+
+    <div>
+        <ol type="1">
+            <h1>
+                <li>
+                    <b>Inline CSS</b>
+                </li>
+            </h1>
+            <h2 style="color: red;">
+                AYUSHMAN THAKUR
+            </h2>
+
+            <h1>
+                <li>
+                    <b>Internal CSS</b>
+                </li>
+            </h1>
+            <span class="green">
+                <h2>Hey My Name Is Ayushman Thakur</h2>
+            </span>
+
+            <h1>
+                <li>
+                    <b>External CSS</b>
+                </li>
+            </h1>
+            <h2>
+                <span>
+                    Hey My Name Is Ayushman Thakur
+                </span>
+            </h2>
+
+            <h1>
+                <li>
+                    <b>CSS Selector's</b>
+                </li>
+            </h1>
+            <ul>
+                <!-- Element Selector -->
+                <h2>
+                    <li>Element Selector</li>
+                </h2>
+                <h3>
+                    I am heading no.3
+                </h3>
+                <!-- Class Selector -->
+                <h2>
+                    <li>Class Selector</li>
+                </h2>
+                <div class="div">
+                    I am a Div
+                </div>
+                <!-- ID Selector -->
+                <h2>
+                    <li>ID Selector</li>
+                </h2>
+                <div id="green">
+                    I am also a Div
+                </div>
+                <!-- Child Selector -->
+                <h2>
+                    <li>Child Selector</li>
+                </h2>
+                <div>
+                    <p>I am a child of Div</p>
+                </div>
+                <!-- Descendant Selector -->
+                <h2>
+                    <li>Descendant Selector</li>
+                </h2>
+                <span>
+                    <article>
+                        <main>
+                            <div>
+                                <p>I am the child of lots of Elements, but my owner is Span</p>
+                            </div>
+                        </main>
+                    </article>
+                </span>
+                <!-- Universal Selector -->
+                <h2>
+                    <li>Universal Selector</li>
+                </h2>
+                <p>Check in &lt;Head&gt;</p>
+                <!-- Pseudo Selector -->
+                <h2>
+                    <li>Pseudo Selector</li>
+                </h2>
+                <div>
+                    <a href="https://www.codewithharry.com/">Code With Harry</a>
+                    <br>
+                    <a href="https://www.apnacollege.in/">Apna College</a>
+                </div>
+                <main class="one" id="content">
+                    <p>I am First child</p>
+                    <p>I am Second child</p>
+                </main>
+                <!-- Grouping Selector -->
+                <h2>
+                    <li>Grouping Selector</li>
+                </h2>
+                <div class="group">
+                    <h1>
+                        Hey I am a Heading.
+                    </h1>
+                    <h2>
+                        Hey I am a Another Heading.
+                    </h2>
+                    <p>
+                        Hey I am a Paragraph.
+                    </p>
+                </div>
+            </ul>
+            <!-- Box Model -->
+            <h1>
+                <li>
+                    <b>Box Model</b>
+                </li>
+            </h1>
+            <div class="box box1">I am a Box</div>
+            <div class="box box2">I am another Box</div>
+            <!-- Fonts -->
+            <h1>
+                <li>
+                    <b>CSS Fonts</b>
+                </li>
+            </h1>
+            <p id="Font">
+                Hey I am Font in CSS Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus maxime ducimus
+                repellendus ea obcaecati voluptatibus minus rerum animi voluptates. Veniam.
+            <h2 class="text">
+                about font
+            </h2>
+            </p>
+            <!-- Google font Link -->
+            <!-- https://fonts.google.com/?preview.text=Ayushman%20Thakur -->
+            <h4>text-overflow: ellipsis;</h4>
+            <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolor quae harum,
+                cupiditate labore placeat commodi consequuntur totam, natus consequatur quas, laudantium quo. At quis
+                repudiandae necessitatibus optio facilis suscipit.</p>
+            <h4>text-overflow: clip;</h4>
+            <p class="Lorem2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolor quae harum,
+                cupiditate labore placeat commodi consequuntur totam, natus consequatur quas, laudantium quo. At quis
+                repudiandae necessitatibus optio facilis suscipit.</p>
+            <h4>word-break: break-all;</h4>
+            <p class="Lorem3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolor quae harum,
+                cupiditate labore placeat commodi consequuntur totam, natus consequatur quas, laudantium quo. At quis
+                repudiandae necessitatibus optio facilis suscipit.</p>
+            <!-- COLORS -->
+            <h1>
+                <li>
+                    <b>CSS COLORS</b>
+                </li>
+            </h1>
+            <h3 style="text-align: center;">Colors can be Represented in :-
+                <ol>
+                    <!-- Color Keywords -->
+                    <h4>
+                        <li>
+                            <b>Color Keywords</b>
+                        </li>
+                    </h4>
+                    <h1 class="keyword">I am type 1</h1>
+
+                    <!-- HEX Color Code -->
+                    <h4>
+                        <li>
+                            <b>HEX Color Code</b>
+                        </li>
+                    </h4>
+                    <h1 class="hex">I am Type 2</h1>
+
+                    <!-- RGB -->
+                    <h4>
+                        <li>
+                            <b>RGB</b>
+                        </li>
+                    </h4>
+                    <h1 class="rgb">I am Type 3</h1>
+
+                    <!-- RGBA -->
+                    <h4>
+                        <li>
+                            <b>RGBA</b>
+                        </li>
+                    </h4>
+                    <h1 class="rgba">I am Type 4</h1>
+
+                    <!-- HSL -->
+                    <h4>
+                        <li>
+                            <b>HSL</b>
+                        </li>
+                    </h4>
+                    <h1 class="hsl">I am Type 5</h1>
+
+                    <!-- HSLA -->
+                    <h4>
+                        <li>
+                            <b>HSLA</b>
+                        </li>
+                    </h4>
+                    <h1 class="hsla">I am Type 6</h1>
+                </ol>
+            </h3>
+
+            <!-- px(pixel) -->
+            <h1>
+                <li>
+                    <b>px(pixel)</b>
+                </li>
+            </h1>
+            <div class="px">
+                this is a pixel
+            </div>
+
+            <!-- vw(Viewport Width) -->
+            <!-- & -->
+            <!-- vh(Viewport Hieght) -->
+            <h1>
+                <li>
+                    <b>vw(Viewport Width)
+                        <br>
+                        &
+                        <br>
+                        vh(Viewport Hieght)
+                    </b>
+                </li>
+            </h1>
+            <div class="vw">
+                this is a Viewport Width
+            </div>
+            <p class="vh">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique neque facilis aliquam
+                dolore
+                laborum, soluta voluptates est nemo accusantium numquam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cum nobis alias ut delectus eum a optio,
+                assumenda provident qui repudiandae soluta at est voluptatum natus accusamus corporis ex rem quis
+                reiciendis. Dicta deserunt saepe repellat repellendus nostrum. Provident asperiores aspernatur placeat
+                iure! Adipisci officia nisi eligendi vel doloribus facilis aliquam sed reiciendis repellat! Vero est
+                reprehenderit quasi. Doloremque odit quisquam ratione voluptates accusamus voluptatibus, exercitationem
+                ex deleniti maxime eos, dolorem a, maiores molestiae blanditiis? Quae sequi vitae culpa ratione,
+                voluptas ut sunt sapiente. Dicta omnis sunt autem consectetur nihil natus dignissimos pariatur
+                reiciendis quaerat ab nam, qui libero.</p>
+
+            <!-- em -->
+            <!-- & -->
+            <!-- rem -->
+            <h1>
+                <li>
+                    <b>
+                        EM & REM
+                    </b>
+                </li>
+            </h1>
+            <div class="em">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ad, voluptates quibusdam reiciendis
+                    atque odio ullam enim aspernatur sed officiis. Error numquam magnam harum quidem neque labore!
+                    Quaerat consequuntur dolore quisquam, quae aperiam fuga consectetur? Optio beatae sapiente nobis
+                    fugiat minima nihil alias minus cum dolore dolorum! <div> Repudiandae, odit error. Lorem, ipsum
+                        dolor sit amet consectetur adipisicing elit. Cupiditate nam harum magni temporibus mollitia,
+                        debitis reprehenderit, quisquam, fugiat perferendis sapiente incidunt eligendi illum!\</div>
+                </div>
+
+            </div>
+
+            <!-- Vmin -->
+            <!-- & -->
+            <!-- Vmax -->
+            <h1>
+                <li>
+                    <b>
+                        Vmin & Vmax
+                    </b>
+                </li>
+            </h1>
+            <div class="vmin">
+                I am a Vmin And Vmax
+            </div>
+
+            <!-- CSS Display Property -->
+            <h1>
+                <li>
+                    <b>
+                        CSS Display Property
+                    </b>
+                </li>
+            </h1>
+
+            <div class="display display1">
+                i am a box
+            </div>
+            <div class="display">
+                another box
+            </div>
+
+            <span>
+                i am good
+            </span>
+            <span>
+                boy
+            </span>
+
+            <!-- CSS Shadow's -->
+            <h1>
+                <li>
+                    <b>
+                        Box-Shadow
+                    </b>
+                </li>
+            </h1>
+            <div class="shadow">
+                I am a Box
+            </div>
+
+            <h1>
+                <li>
+                    <b>
+                        Text-Shadow
+                    </b>
+                </li>
+            </h1>
+            <p class="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nobis!</p>
+
+            <!-- Outlines -->
+            <h1>
+                <li>
+                    <b>
+                        Outlines
+                    </b>
+                </li>
+            </h1>
+            <div class="outline">
+                I am boy
+            </div>
+
+            <!-- Css Styling Lists -->
+            <h1>
+                <li>
+                    <b>
+                        Css Styling Lists
+                    </b>
+                </li>
+            </h1>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+
+            <!-- Overflow Property -->
+            <h1>
+                <li>
+                    <b>
+                        Overflow Property
+                    </b>
+                </li>
+            </h1>
+            <div class="over">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore voluptate eaque sequi ad, ut
+                cumque ab minus nemo magnam pariatur in saepe quis officiis ea! Temporibus est tempora aut harum
+                quibusdam debitis, consequatur hic quaerat odio incidunt ad corrupti similique eaque modi porro cumque
+                repudiandae perspiciatis itaque possimus. Mollitia asperiores, magni quaerat delectus eum esse facere at
+                officiis, ad fugit adipisci quibusdam porro suscipit earum eaque libero ut vel, natus quas voluptatibus
+                officia repellendus. Corrupti eum veritatis officia vero, accusamus excepturi natus debitis fuga quas
+                labore ducimus corporis. Nemo id ea nobis inventore ex magnam quibusdam vel quos!
+            </div>
+
+            <!-- Postion Property -->
+            <h1>
+                <li>
+                    <b>
+                        Postion Property
+                    </b>
+                </li>
+            </h1>
+            <div class="parent">
+                <div class="postion postion1"></div>
+                <div class="postion postion2"></div>
+                <div class="postion postion3"></div>
+                <div class="postion postion4"></div>
+            </div>
+
+            <!-- Css Variable -->
+            <h1>
+                <li>
+                    <b>
+                        Css Variable
+                    </b>
+                </li>
+            </h1>
+            <div class="var">
+                <ul class="ul">
+                    <li class="li">Home</li>
+                    <li class="li">About</li>
+                    <li class="li">Contact</li>
+                </ul>
+            </div>
+            <div class="var1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, alias expedita! Labore beatae neque
+                enim debitis, eaque eius voluptatibus. Rem harum magni accusantium eos minus, esse molestias ut at
+                eligendi eum accusamus id! Quae eveniet provident dolores eligendi praesentium iusto in. Sit assumenda
+                nostrum culpa!
+            </div>
+
+            <!-- Css Media Query -->
+            <!-- In another html page -->
+
+            <!-- Css Float & Clear -->
+            <h1>
+                <li>
+                    <b>
+                        Css Float & Clear
+                    </b>
+                </li>
+            </h1>
+            <div class="cards">
+                <img src="img.webp" alt="">
+                <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, delectus fuga.
+                    Veniam illum possimus sequi rem neque tempore suscipit repellendus temporibus fugit. Aut!</div>
+                <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum est minima dolores
+                    adipisci quas, tempora itaque. Ducimus praesentium repellat pariatur facere dolore qui officiis odit
+                    possimus quis? Dolorum quo iure quam tenetur! Excepturi molestias, commodi temporibus magni mollitia
+                    alias minima nemo dolore nisi facilis quia, odio vel! At, inventore commodi. Aut vel itaque nisi
+                    doloremque atque voluptates aspernatur placeat repudiandae sed beatae ut explicabo pariatur sequi,
+                    mollitia veritatis fugiat! Quibusdam, ipsum? Asperiores accusamus doloribus itaque dicta voluptatem
+                    non neque porro, commodi velit. Quidem perspiciatis molestiae voluptatem commodi modi nulla in
+                    veritatis hic quos tenetur, dolorum ipsa autem, qui minus est suscipit voluptatibus pariatur
+                    consectetur eveniet laudantium atque ut aliquam quibusdam quo. Exercitationem at, assumenda dolor ex
+                    tempora corporis amet deleniti maiores eos fugit quis voluptatibus, sequi aliquid facilis nulla
+                    totam possimus nobis. Quae, deleniti aliquid. Reprehenderit deleniti, eum iste dolorum provident
+                    nobis deserunt sunt earum repudiandae rem. Iusto deserunt quibusdam nesciunt totam quasi aliquam
+                    omnis id voluptatum tenetur reprehenderit. Numquam vero ullam facere nam, ab sed dignissimos fugit
+                    officiis cum animi sapiente non nesciunt ipsa earum illum neque provident sunt ea iusto!
+                    Perspiciatis amet ipsa nulla accusantium consequuntur labore perferendis inventore dolores, non id,
+                    veniam excepturi, corrupti a debitis quam porro voluptatum libero impedit. Ipsa commodi natus iste
+                    maiores. Vitae modi ut cum. Doloremque optio aut laboriosam, officia et, accusantium illo aliquam ad
+                    atque, ut molestias sapiente aspernatur nulla blanditiis ex nam! Nam distinctio soluta voluptatem
+                    dignissimos blanditiis asperiores facilis laudantium quod sunt totam, aspernatur perferendis dolores
+                    perspiciatis pariatur at dolor atque consectetur illum! Tenetur aut non atque ipsam voluptate quo
+                    maxime ducimus explicabo aspernatur ullam deleniti saepe ut quidem quas ipsum incidunt vitae
+                    corrupti quibusdam, sed hic nostrum rerum numquam! Labore assumenda asperiores magni enim nam
+                    excepturi neque, reiciendis fugiat quo tenetur repellat accusamus necessitatibus? Ab, ad. Eaque, in.
+                    Quis molestiae facere perferendis perspiciatis omnis illum fugiat. Vel assumenda alias magni cumque
+                    veniam? Quidem molestiae, iste quae officia, adipisci porro doloremque enim suscipit iusto dolore
+                    explicabo excepturi aliquam provident reiciendis velit aspernatur?</div>
+                <div class="card">Card 3</div>
+            </div>
+
+            <!-- More in Css Selectors -->
+            <h1>
+                <li>
+                    <b>
+                        More in Css Selectors
+                    </b>
+                </li>
+            </h1>
+            <div class="selector">
+                <div data-color="Primary" class="select">I am A box</div>
+                <div class="select">I am a 2 box</div>
+                <div class="select">I am a 3 box</div>
+            </div>
+
+            <!-- Flex Box -->
+            <h1>
+                <li>
+                    <b>
+                        Flex Box
+                    </b>
+                </li>
+            </h1>
+            <div class="flex">
+                <div class="items items1">1</div>
+                <div class="items items2">2</div>
+                <div class="items">3</div>
+                <div class="items order2">4</div>
+                <div class="items order2">55</div>
+                <div class="items order1">66</div>
+                <div class="items order3">77</div>
+                <div class="items order1">88</div>
+                <div class="items order3">99</div>
+            </div>
+            <!-- <img width="500px" src="Screenshot (287).png" alt=""> -->
+            <br>
+
+            <!-- CSS Grid -->
+            <!-- In Another index.html - (grid1.html) and (grid2.html) -->
+
+            <!-- CSS Transform -->
+            <h1>
+                <li>
+                    <b>
+                        CSS Transform
+                    </b>
+                </li>
+            </h1>
+            <div class="transform">
+                <div class="trans">
+                    Box
+                </div>
+            </div>
+
+            <!-- Transition Property -->
+            <h1>
+                <li>
+                    <b>
+                        Transition Property
+                    </b>
+                </li>
+            </h1>
+            <div class="transition">
+                <div class="hole translate"></div>
+            </div>
+
+            <!-- Animation Property -->
+            <h1>
+                <li>
+                    <b>
+                        Animation Property
+                    </b>
+                </li>
+            </h1>
+            <div class="animation">
+                <div class="anime">
+                    Box
+                </div>
+            </div>
+
+            <!-- Filters Properties -->
+            <h1>
+                <li>
+                    <b>
+                        Filters Properties
+                    </b>
+                </li>
+            </h1>
+            <div class="filter">
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ol>
+    </div>
+
+</body>
+
+</html>

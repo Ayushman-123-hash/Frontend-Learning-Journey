@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design the Grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .logo {
+            height: 23px;
+            width: 40px;
+            position: absolute;
+            left: 33px;
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+
+        header {
+            /* background-color: bisque; */
+            height: 71px;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div>ul {
+            display: flex;
+            position: absolute;
+            right: 77px;
+            padding-top: 12px;
+        }
+
+        ul>li {
+            list-style: none;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .right button {
+            padding: 9px 15px !important;
+            border: 2px solid #000 !important;
+            border-radius: 3px;
+            font-weight: 600 !important;
+            font-style: normal;
+            text-transform: uppercase;
+            font-size: 15px !important;
+            margin-left: 110px;
+        }
+
+        .first {
+            display: flex;
+            /* background-color: aqua; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            margin: 45px;
+            padding: 33px;
+            font-family: 'Segoe UI';
+        }
+
+        .first span {
+            font-size: 48px;
+        }
+
+        .first span img {
+            padding-left: 10px;
+        }
+
+        .first div {
+            font-size: 20px
+        }
+
+        .first .btn {
+            font-size: 13px;
+            background-color: #00b6d1;
+            border-width: 0px !important;
+            border-radius: 5px;
+            font-weight: bold;
+            font-style: normal;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            padding: 15px 18px;
+        }
+
+        .blue{
+            background-color: #00b6d1;
+            border-width: 0px !important;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 10px;
+        }
+        
+        .green{
+            background-color: green;
+            border-width: 0px !important;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 10px;
+        }
+        
+
+        #svg {
+            margin-right: -25px;
+        }
+
+        .div {
+            font-size: 24px !important;
+
+        }
+
+        .div1 {
+            font-size: 24px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .second img{
+            border: 2px solid black;
+            border-radius: 220px;
+            width: 58px;
+            position: absolute;
+            bottom: 55px;
+            left: 200px;
+        }
+
+        .second{
+            background-color: aqua;
+        }
+
+        .download{
+            /* position: absolute;
+            left: 280px; */
+            font-size: x-large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .big{
+            font-weight: 370;
+        }
+
+        .small{
+            font-size: 12px !important; 
+            font-weight: 400;
+        }
+
+        .item{
+            border: 2px solid black;
+        }
+
+        .grid{
+            display: flex;
+            border: 2px solid black;
+            grid-template-columns: 10px 10px 10px;
+            grid-template-rows: 20px 20px 20px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Frame-1-2.png" alt="">
+            </div>
+            <br>
+            <div class="right">
+                <ul>
+                    <li><span>Products</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                            height="17" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Pricing</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                            height="17" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Resources</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                            height="17" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Our Company</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17"
+                            height="17" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><button>Download</button></li>
+                    <li id="svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#141B34" stroke-width="1.5" />
+                            <path d="M8 12C8 18 12 22 12 22C12 22 16 18 16 12C16 6 12 2 12 2C12 2 8 6 8 12Z"
+                                stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M21 15H3" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21 9H3" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></li>
+                    <li>English</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <path d="M17 17L21 21" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first">
+            <span>Download <b>UltraEdit</b> for Windows <img width="110px" height="31px"
+                    src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt=""></span>
+            <div class="div">Download and try UltraEdit before you buy it! This download includes the full Windows
+                <br>
+                <div class="div1">version of the
+                    text editor.</div>
+            </div>
+            <div>
+                <button class="btn">
+                    <b>Download Mac or Linux version</b>
+                </button>
+            </div>
+        </section>
+
+        <section class="second">
+            <!-- <img src="logo.jpeg" alt=""> -->
+            <div class="download">
+                
+                <span class="big">Download UltraEdit</span>
+                <span class="small">v2025.0.0.39 (released 2025-08-06) | Latest changes</span>
+            </div>
+
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div><br>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div><br>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div><br>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div><br>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div><br>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div><br>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div><br>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item-lang">English</div><br>
+                    <button class="btn blue">Download 32bit</button>
+                    <button class="btn green">Download 64bit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

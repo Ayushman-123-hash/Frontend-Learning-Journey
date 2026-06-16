@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 75px;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        .container1{
+            display: flex;
+        }
+        .box1{
+            width: 75px;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        .container2{
+            background-color: lightgreen;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .childcontainer{
+            background-color: lightcyan;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+        .child{
+            background-color: lightblue;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+        .container3{
+            background-color: lightgreen;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div id="daba" class="box">Box2.5</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+    <div class="container1">
+        <div class="box1">Box1</div>
+        <div class="box1">Box2</div>
+        <div id="daba" class="box1">Box2.5</div>
+        <div class="box1">Box3</div>
+        <div class="box1">Box4</div>
+        <div class="box1">Box5</div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati magnam molestiae delectus non soluta itaque cupiditate molestias, magni cumque incidunt hic natus autem recusandae ipsa, eligendi harum sed vero quia!</p>
+
+    
+    
+    <!-- EventListener -->
+    <div class="container">
+        <div class="box2">Hey I am a Box</div>
+    </div>
+    <button id="btn">Change Content</button>
+    
+    
+    <!-- Event Bubbling & SetInterval -->
+    <div class="container2"> I am a Container
+        <div class="childcontainer"> I am a Child Container
+            <div class="child">I am a Child</div>
+        </div>
+    </div>   
+
+    <!-- SetTimeout -->
+    <div class="container3"> I am a Container</div>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script src="Ruff_Dom.js"></script> -->
+    <script src="Ruff.js"></script> 
+</body>
+
+</html>

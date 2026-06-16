@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    Hey this is my first website.
+    <div style="text-align: center;">
+        <h1>
+            <b><u>HTML START</u></b>
+        </h1>
+    </div>
+    <div>
+        <ol type="1">
+            <h1>
+                <li>Heading Tag</li>
+            </h1>
+            <h1>Introduction --------- using h1</h1>
+            <h2>Name --------- using h2</h2>
+            <h3>Course --------- using h3</h3>
+            <h4>Roll NO. --------- using h4</h4>
+            <h5>Batch --------- using h5</h5>
+            <h6>Section --------- using h6</h6>
+
+            <h1>
+                <li>Paragraph Tag</li>
+            </h1>
+            <p style="background-color: thistle;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde velit
+                veritatis beatae consequuntur architecto ipsam quaerat repellendus sequi impedit, quas aliquam
+                assumenda.
+                Aliquam!</p>
+
+            <h1>
+                <li>Anchor Tag</li>
+            </h1>
+            <a href="https://www.google.com/">Open Google</a>
+            <div></div>
+            <a href="https://www.facebook.com/">Open Facebook</a>
+            <div></div>
+            <a href="https://www.instagram.com/">Open Instagram</a>
+            <div></div>
+            <a href="https://www.twitter.com/">Open Twitter</a>
+            <div></div>
+            <a href="https://www.wikipedia.com">Open Wikipedia</a>
+            <div></div>
+            <a href="https://www.youtube.com">Open Youtube</a>
+            <div></div>
+
+            <h1>
+                <li>Image Tag</li>
+            </h1>
+            <img height="230" width="408" src="Jonh snow 2.jpg" alt="Jon snow">
+            <h4>Jon Snow King in the North</h4>
+            <div></div>
+            <img height="230" width="408" src="Jonh snow 3.jpg" alt="Jon snow">
+            <h4>Jon Snow King of Seven Kingdoms</h4>
+
+            <h1>
+                <li>Table Tag</li>
+            </h1>
+            <table>
+                <thead>
+                    <caption> Student Details </caption>
+                    <tr>
+                        <th>Name</th>
+                       ♥; <th>Course</th>
+                        <th>Batch</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Ayushman</td>
+                        <td rowspan="2">BCA</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Ayushman</td>
+                        <td>2023</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h1>
+                <li>List's Tag</li>
+            </h1>
+            <H3>Unorderd List</H3>
+            <ul type="square">
+                <li>Ayushman</li>
+                <li>Harry</li>
+                <li>Jon Snow</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol type="A">
+                <li>Ayushman</li>
+                <li>Harry</li>
+                <li>Jon Snow</li>
+            </ol>
+
+            <h3>Defination List</h3>
+            <dl>
+                <dt>Ayushman</dt>
+                <dd>he is a good boy</dd>
+                <dt>Harry</dt>
+                <dd>He is a bad boy</dd>
+                <dt>Jon Snow</dt>
+                <dd>King in the North</dd>
+            </dl>
+
+            <h1>
+                <li>Form Tag</li>
+            </h1>
+
+            <ol>
+                <div style="text-align: center;">
+                    <h2>
+                        <li><b>Text & Password Input</b></li< /h2>
+                            <h4><b>YOUTUBE</b></h4>
+                            <form action="post">
+                                <caption>Username</caption>
+                                <br>
+                                <input type="text" name="Ayushman" placeholder="Enter the Username">
+                                <br>
+                                <caption>Password</caption>
+                                <br>
+                                <input type="password" name="Ayush" placeholder="Enter the Password">
+                                <br>
+                                <input id="mybutton" type="button" value="Login">
+                                <!-- java script -->
+                                <script>
+                                    const button = document.getElementById('mybutton');
+                                    button.addEventListener('click', function () {
+                                        window.location.href = 'https://www.youtube.com/';
+                                    });
+                                </script>
+                                <!-- java script -->
+                </div>
+
+                <div style="text-align: center;">
+                    <h2>
+                        <li>Radio Button</li>
+                    </h2>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+
+                    <h2>
+                        <li>CheckBox</li>
+                    </h2>
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                    <label for="subscribe">Subscribe To Complete</label>
+
+                    <div>
+                        <h2>
+                            <li>TextArea</li>
+                        </h2>
+                        <label for="Comment">Enter Your Comment</label>
+                        <br>
+                        <textarea id="Comment" name="Description" rows="5" cols="40"></textarea>
+                    </div>
+
+                    <h2>
+                        <li>Select Tag</li>
+                    </h2>
+                    <label for="Fruit">Select Fruit</label>
+                    <select name="Fruit" id="Fruit">
+                        <option value="">Choose</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Banana">Banana</option>
+                        <option value="Dragon Fruit">Dragon Fruit</option>
+                        <option value="Kiwi">Kiwi</option>
+                    </select>
+                </div>
+            </ol>
+            </form>
+
+            <div>
+                <h1>
+                    <li><b>Video Tag</b></li>
+                </h1>
+                <video style="width: 400px; height: 600px; " src="Edit.mp4" controls
+                    poster="IMG-20250213-WA0010.jpg"></video>
+            </div>
+
+            <div>
+                <h1>
+                    <li><b>Audio Tag</b></li>
+                </h1>
+                <audio src="Meherbaan Bang Bang 320 Kbps.mp3" controls loop></audio>
+            </div>
+
+            <div>
+                <h1>
+                    <li><b>Scalable Vector Graphics(SVGs)</b></li>
+                </h1>
+                <label for="image">Only Use SVGs Tag</label>
+                <br>
+                <svg class="image" height="100" width="100">
+                    <circle cx="50" cy="50" r="40" storke="black" stroke-width="3" fill="red" />
+                </svg>
+                <br>
+                <label for="image">Using NameSpace Declaration</label>
+                <br>
+                <img class="image" src="img.svg" alt="">
+            </div>
+
+            <div>
+                <h1>
+                    <li><b>IFrames Tag</b></li>
+                </h1>
+                <iframe src="https://www.codewithharry.com/" width="1200" height="600" frameborder="2"></iframe>
+            </div>
+
+            <h1>
+                <li>
+                    <b>Semantic Tag</b>
+                </li>
+            </h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <p>
+                <h2><b>Semantic Tags</b></h2>
+                </p>
+            </main>
+
+            <footer>
+                <p>CopyRights 2025</p>
+            </footer>
+
+            <h1>
+                <li>
+                    <b>HTML Entities</b>
+                </li>
+            </h1>
+            <ul>
+                <div>
+                    <h2>
+                        <li>Reserved Characters</li>
+                    </h2>
+                    this is a papagraph tag &lt;p&gt;&lt;/p&gt;
+                </div>
+
+                <div>
+                    <h2>
+                        <li>Special Symbol</li>
+                    </h2>
+                    &copy;
+                    <br>
+                    &real;
+                    <br>
+                    &aacute;
+                </div>
+
+                <div>
+                    <h2>
+                        <li>Non-Breaking Space</li>
+                    </h2>
+                    This
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;web
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;page
+                    <h2>~With, PRE Tag</h2>
+                    <pre>
+                This        is       my         web site.
+
+
+
+
+
+
+                Ayushman                                                      Thakur
+            </pre>
+                </div>
+            </ul>
+
+            <h1>
+                <li>
+                    <b>HTML Quatation Tag's</b>
+                </li>
+            </h1>
+            <ol>
+                <div>
+                    <h2>
+                        <li>Blockquote Quatation</li>
+                    </h2>
+                    <blockquote cite="www.wikipedia.org">
+                        This is the long Quote from an external source. This Quote can span multiple lines and
+                        paragraph.
+                    </blockquote>
+                </div>
+                <div>
+                    <h2>
+                        <li>Q Quatation</li>
+                    </h2>
+                    <q cite="www.wikipedia.com">
+                        This is the short Quote from an internal source.
+                    </q>
+                </div>
+            </ol>
+
+            <h1>
+                <li>
+                    <b>PRE Tag</b>
+                </li>
+            </h1>
+            <div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;
+&lt;title&gt;Profile Card&lt;/title&gt;
+&lt;link rel="stylesheet" href="project.css"/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="card"&gt;
+&lt;img src="IMG-20250213-WA0010.jpg" alt="Profile Picture" class="profile-pic"&gt;
+&lt;h1&gt;Ayushman Thakur&lt;/h1&gt;
+&lt;p class="bio"&gt;A short bio about yourself goes here. Keep it chill and fun!&lt;/p&gt;
+&lt;div class="socials"&gt;
+    &lt;a href="#" class="social-icon"&gt;🐦&lt;/a&gt;
+    &lt;a href="#" class="social-icon"&gt;📸&lt;/a&gt;
+    &lt;a href="#" class="social-icon"&gt;💼&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            </div>
+
+            <div style="text-align: center;">
+                <h1>
+                    <b>(<u>COMPLTE HTML</u>)</b>
+                </h1>
+            </div>
+
+        </ol>
+    </div>
+</body>
+
+</html>

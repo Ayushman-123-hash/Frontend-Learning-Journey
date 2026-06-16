@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval & Set TimeOut</title>
+    <style>
+        .child{
+            background-color: lightblue;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+        .childcontainer{
+            background-color: lightcyan;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+        .container{
+            background-color: lightgreen;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                I am a Child
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // Function for get Random Color ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        function getRandomColor(){
+            let letters = "0123456789ABCDEF";
+            let color = "#";
+            for(let i=0; i<6; i++){
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // setInterval ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        // let a = setInterval(() => {
+        //     document.querySelector(".child").style.backgroundColor = getRandomColor();
+        // }, 3000);
+
+        // let b = setInterval(() => {
+        //     document.querySelector(".childcontainer").style.backgroundColor = getRandomColor();
+        // }, 3000);
+
+        // let c = setInterval(() => {
+        //     document.querySelector(".container").style.backgroundColor = getRandomColor();
+        // }, 3000);
+
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+
+        // setTimeout ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+         setTimeout(() => {
+             document.querySelector(".child").style.backgroundColor =  getRandomColor();
+         }, 1000);
+
+         setTimeout(() => {
+             document.querySelector(".childcontainer").style.backgroundColor = getRandomColor();
+         }, 1000);
+
+         setTimeout(() => {
+             document.querySelector(".container").style.backgroundColor = getRandomColor();
+         }, 1000);
+        
+    </script>
+</body>
+
+</html>

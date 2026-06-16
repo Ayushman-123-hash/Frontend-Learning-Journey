@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage 2</title>
+</head>
+<body>
+    <script>
+        // 🧑‍💻 STEP 1: Object banao
+const user = { name: "Ayush", age: 21 };
+
+
+// 📦 STEP 2: STORE (setItem)
+localStorage.setItem("user", JSON.stringify(user));
+
+
+// 📥 STEP 3: GET (getItem)
+const data = JSON.parse(localStorage.getItem("user"));
+console.log("User Name:", data.name);
+
+
+// 🔄 STEP 4: UPDATE (same key pe dobara set)
+data.age = 25;
+localStorage.setItem("user", JSON.stringify(data));
+
+console.log("Updated User:", JSON.parse(localStorage.getItem("user")));
+
+
+// 🔍 STEP 5: CHECK if key exists
+if (localStorage.getItem("user") !== null) {
+  console.log("User exists ✅");
+}
+
+
+// ➕ STEP 6: Multiple data add karo
+localStorage.setItem("city", "Noida");
+localStorage.setItem("country", "India");
+
+
+// 🔢 STEP 7: TOTAL ITEMS (length)
+console.log("Total Items:", localStorage.length);
+
+
+// 🔑 STEP 8: LOOP + key() + getItem()
+for (let i = 0; i < localStorage.length; i++) {
+  let key = localStorage.key(i);
+  let value = localStorage.getItem(key);
+
+  console.log(`Key: ${key}, Value: ${value}`);
+}
+
+
+// ❌ STEP 9: REMOVE specific item
+localStorage.removeItem("city");
+
+console.log("After removing city:", localStorage);
+
+
+// 💣 STEP 10: CLEAR ALL
+// (⚠️ isko last me run karna warna sab delete ho jayega)
+localStorage.clear();
+
+console.log("After clear:", localStorage);
+    </script>
+</body>
+</html>

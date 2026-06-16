@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    
+    <script>
+        // Important Note:- keys and values both are stored as strings in localStorage. If you want to store other data types like objects or arrays, you need to convert them to strings using JSON.stringify() before storing them and use JSON.parse() to convert them back to their original form when retrieving them from localStorage.
+        
+        //  localStorage is a web storage API that allows you to store data in the browser's local storage. It provides a simple key-value pair storage mechanism that persists even after the browser is closed. The data stored in localStorage is specific to the domain and can be accessed by any page on the same domain. and it is accessible through the global object localStorage. and localstorage is servive the refresh of the page and it is not sent to the server with every request like cookies.
+        let key = prompt("Enter your Key :")
+        let value = prompt("Enter your value :")
+        // There ara some methods of localstorage like setItem(), getItem(), removeItem(), clear(), key() and length() method.
+
+            // setItem():- method is used to store data in localStorage. It takes two arguments(Key and Value), the first is the key of the item you want to store, and the second is the value you want to store.
+            localStorage.setItem(key,value)
+
+            // getItem():- method is used to retrieve data from localStorage. It takes one argument, which is the key of the item you want to retrieve.
+            console.log(`The Value at ${key} is ${localStorage.getItem(key)}`)
+
+            // removeItem():- method is used to remove a specific item from localStorage. It takes one argument, which is the key of the item you want to remove.
+            if(key=="red" || key=="blue" || key=="green"){
+                localStorage.removeItem(key)
+            }
+
+            // clear():- method is used to remove all items from localStorage. It does not take any arguments.
+            if(key=="clear"){
+                localStorage.clear()
+            }
+
+            // key():- method is used to retrieve the key of an item in localStorage by its index. It takes one argument, which is the index of the item you want to retrieve the key for.
+            localStorage.key(0)  // it will return the key of the first item stored in localStorage
+            localStorage.key(1)
+            localStorage.key(2)
+            // etc....
+            
+            // length():- method is used to get the number of items stored in localStorage. It does not take any arguments.
+            localStorage.length
+    </script>
+</body>
+</html>

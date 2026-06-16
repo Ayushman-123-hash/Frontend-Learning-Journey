@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+
+<body>
+
+    <script>
+        console.log(document.cookie);
+        document.cookie = "name=JohnDoe";
+        document.cookie = "name=Ayuschut";
+        document.cookie = "name=dhkdbDjdkoe";
+        console.log(document.cookie);
+
+        // EncodeURIComponent() and decodeURIComponent() are used to encode and decode the cookie value respectively. This is useful when the cookie value contains special characters that may interfere with the cookie parsing.
+
+        let key = prompt("Enter your Key:")
+        let value = prompt("Enter your value:")
+        document.cookie = `${encodeURIComponent(key)} = ${encodeURIComponent(value)}`;
+        console.log(document.cookie)
+
+        // decodeURIComponent() is used to decode the cookie value when you want to read it back. This is necessary because the cookie value may have been encoded using encodeURIComponent() to handle special characters.
+        let decodedValue = decodeURIComponent(document.cookie);
+        console.log(decodedValue);
+    </script>
+
+</body>
+
+</html>

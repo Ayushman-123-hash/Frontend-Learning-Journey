@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        .ayush{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display:contents;" class="container">
+        <div class="box ayush" data-createdBy="Ayushman Thakur">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+    </div>
+
+    <!-- Inserting Tag In DOM ------------------------------------------------------------------>
+    <script>
+        let div = document.createElement("div")
+        div.innerHTML = "I Have Been Inserted <b>by Ayushman</b>"
+        div.setAttribute("class", "created")
+        document.querySelector(".container").append(div)
+        // document.querySelector(".container").prepend(div)
+        //   document.querySelector(".container").before(div)
+        // document.querySelector(".container").after(div)
+        // document.querySelector(".container").replaceWith(div , span)
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("beforebegin", "<b> before begin </b>")
+        cont.insertAdjacentHTML("afterbegin", "<b> after begin </b>")
+        cont.insertAdjacentHTML("beforeend", "<b> before end </b>")
+        cont.insertAdjacentHTML("afterend", "<b> after end </b>")
+    </script>
+
+    <script>
+        // node remove ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        document.querySelector(".box").remove()
+        undefined
+
+        // Class Name & Class List ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+        document.querySelector(".box").className
+        'box'
+        document.querySelector(".box").classList
+        // DOMTokenList['box', value: 'box']0: "box"length: 1value: "box"[[Prototype]]: DOMTokenList
+            
+            // Add & Remove
+                document.querySelector(".box").classList.add("ayush")
+                undefined
+
+                document.querySelector(".box").classList.remove("ayush")
+                undefined
+
+            // Toggle
+                document.querySelector(".box").classList.toggle("ayush")
+                undefined 
+                document.querySelector(".box").classList.toggle("ayush")
+                undefined   
+    </script>
+</body>
+
+</html>

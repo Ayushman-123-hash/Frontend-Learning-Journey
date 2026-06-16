@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 1</title>
+    <!-- CSS Grid -->
+      <style>
+        .grid{
+            width: 80vw;
+            height: 90vh;
+            border: 2px solid black;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+
+            /* Grid Template property (rows & columns) */
+
+            /* grid-template-columns: 120px 100px; */
+            /* grid-template-rows: 100px 100px 100px; */
+
+            /* fr property */
+            grid-template-columns: 1fr 2fr 1fr;
+
+            /* gap property */
+            /* gap: 24px; */
+            row-gap: 22px;
+            column-gap: 34px;
+        }
+
+        .grid1{
+            border: 2px solid red;
+            width: 55px;
+            height : 55px;
+        }
+
+        /* .grid-4{
+            this is a shorthand technique
+            grid-row: 1/2;
+            you can also write like this
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+            grid-column: 1/2;
+        }
+
+        .grid-3{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        } */
+      </style>
+</head>
+<body>
+    <!-- CSS Grid -->
+             <h1>
+                <li>
+                    <b>
+                        CSS Grid
+                    </b>
+                </li>
+             </h1>
+             <div class="grid">
+                <div class="grid1 grid-1">1</div>
+                <div class="grid1 grid-2">2</div>
+                <div class="grid1 grid-3">3</div>
+                <div class="grid1 grid-4">4</div>
+                <div class="grid1 grid-5">5</div>
+             </div>
+</body>
+</html>

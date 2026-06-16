@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <!-- Error handling is the process of anticipating, detecting, and responding to errors that may occur during the execution of a program. It involves writing code that can gracefully handle unexpected situations, such as invalid user input, network failures, or other runtime errors, without crashing the program.
+
+    In JavaScript, error handling is typically done using try...catch statements. The try block contains code that may throw an error, while the catch block contains code that handles the error if it occurs. You can also use the finally block to execute code that should run regardless of whether an error occurred or not. -->
+
+    <script>
+
+        setTimeout(()=>{
+            console.log("This is a message from setTimeout function")
+        },1000)
+
+        try{
+            console.log(control);  // this will throw an error because control is not defined
+        }catch(error){
+            console.log("An error occurred: " + error.message);
+        }finally{
+            console.log("bs dekh rha hu ki iss k kya kaam hai");
+        }
+
+        setTimeout(()=>{
+            console.log("This is a message from setTimeout function2")
+        },2000)
+
+        setTimeout(()=>{
+            console.log("This is a message from setTimeout function3")
+        },3000)
+
+        setTimeout(()=>{
+            console.log("This is a message from setTimeout function4")
+        },4000)
+
+    // Error Object :- In JavaScript, the Error object is a built-in object that represents an error that occurs during the execution of a program. It contains properties such as name, message, stack, and others that provide information about the error. You can create custom error objects by extending the Error class or by using the Error constructor function.
+
+    try{
+        console.log(hello);  // this will throw an error because control is not defined
+    }catch(error){
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack);
+    }
+
+    // Custom Error Object :- You can create custom error objects by extending the Error class or by using the Error constructor function. This allows you to create more specific error types that can provide additional information about the error.
+
+    try{
+        let age = prompt("Enter your age:");
+        age = Number.parseInt(age);
+        if (age>150){
+            throw new ReferenceError("Age cannot be greater than 150");
+        }
+        else{
+            console.log("This script is still running...")
+        }
+    }catch(err){
+        console.log(err.name);
+        console.log(err.message);
+        console.log(err.stack);
+    }
+
+    // Finally Clause :- The finally block is used to execute code that should run regardless of whether an error occurred or not. It is typically used to clean up resources or perform any necessary finalization tasks.
+
+    const f = ()=>{
+        try{
+            let a = 0
+            // console.log(program);
+            console.log("program run succesfully...");
+            return
+        }catch(err){
+            console.log("This is an error")
+            console.log(p);
+
+        }finally{
+            console.log("This will always run")
+            // close the file
+            // exit the loop
+            // write to the log file
+        }
+    }
+    f();
+    console.log('The End');
+    
+
+    
+        
+
+        
+    </script>
+</body>
+</html>
